@@ -6,7 +6,7 @@ function Header() {
   const navigate = useNavigate();
   const [showCatalog, setShowCatalog] = useState(false);
   const [showSubmenu, setShowSubmenu] = useState(null);
-  const user = localStorage.getItem('user');
+  const user = JSON.parse(localStorage.getItem('user'));
 
   const catalogMenu = {
     'Снаряжение': ['Перчатки', 'Шлема', 'Бинты', 'Капы', 'Защита', 'Тренажёры'],
@@ -22,7 +22,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerInner}>
-        {/* ЛОГОТИП */}
+        
         <Link to="/catalog" className={styles.logo}>
           <span className={styles.logoIcon}>🥊</span>
           <div className={styles.logoText}>
@@ -31,9 +31,9 @@ function Header() {
           </div>
         </Link>
 
-        {/* НАВИГАЦИЯ */}
+        
         <nav className={styles.nav}>
-          {/* КАТАЛОГ С ВЫПАДАЮЩИМ МЕНЮ */}
+          
           <div 
             className={styles.catalogWrapper}
             onMouseEnter={() => setShowCatalog(true)}
@@ -87,7 +87,7 @@ function Header() {
         <div className={styles.auth}>
           {user ? (
             <div className={styles.userBlock}>
-              <span className={styles.userName}>👤 {user}</span>
+              <span className={styles.userName}>👤 {user?.name}</span>
               <button onClick={logout} className={styles.logoutBtn}>ВЫЙТИ</button>
             </div>
           ) : (

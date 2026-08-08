@@ -1,4 +1,4 @@
-/* ===== ШАПКА ===== */
+
 .header {
   background: rgba(13, 13, 13, 0.95);
   backdrop-filter: blur(20px);
@@ -25,7 +25,7 @@
   height: 70px;
 }
 
-/* ===== ЛОГОТИП ===== */
+
 .logo {
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@
   font-weight: 500;
 }
 
-/* ===== НАВИГАЦИЯ ===== */
+
 .nav {
   display: flex;
   align-items: center;
@@ -97,7 +97,7 @@
   width: 100%;
 }
 
-/* ===== КАТАЛОГ С ВЫПАДАЮЩИМ МЕНЮ ===== */
+
 .catalogWrapper {
   position: relative;
 }
@@ -134,10 +134,10 @@
   transform: rotate(180deg);
 }
 
-/* Выпадающее меню */
+
 .dropdown {
   position: absolute;
-  top: calc(100% + 15px);
+  top: calc(100% + 5px);
   left: 0;
   background: rgba(20, 20, 20, 0.98);
   border: 1px solid #333;
@@ -146,7 +146,7 @@
   min-width: 220px;
   backdrop-filter: blur(20px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  animation: fadeIn 0.2s ease-out;
+  animation: fadeIn 0.35s ease-out;
 }
 
 @keyframes fadeIn {
@@ -187,10 +187,10 @@
   transform: translateX(3px);
 }
 
-/* Подменю */
+
 .submenu {
   position: absolute;
-  left: calc(100% + 5px);
+  left: 100%;
   top: 0;
   background: rgba(20, 20, 20, 0.98);
   border: 1px solid #333;
@@ -199,7 +199,7 @@
   min-width: 180px;
   backdrop-filter: blur(20px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  animation: fadeInRight 0.2s ease-out;
+  animation: fadeInRight 0.35s ease-out;
 }
 
 @keyframes fadeInRight {
@@ -230,7 +230,7 @@ letter-spacing: 1px;
   padding-left: 25px;
 }
 
-/* ===== АВТОРИЗАЦИЯ ===== */
+
 .auth {
   display: flex;
   align-items: center;

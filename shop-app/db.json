@@ -102,7 +102,7 @@
       "price": 690,
       "category": "Аксессуары",
       "subcategory": "Аксессуары",
-      "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=400&fit=crop",
+      "image": "https://i.pinimg.com/1200x/42/f5/5d/42f55d665b5109ce40ec10d36c33021d.jpg",
       "description": "Лёгкая скакалка для кардиотренировок. Подшипниковое соединение."
     },
     {
@@ -111,7 +111,7 @@
       "price": 12990,
       "category": "Снаряжение",
       "subcategory": "Тренажёры",
-      "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=400&fit=crop",
+      "image": "https://i.pinimg.com/736x/7b/cd/ec/7bcdecada6f35641cd9f1763d20435e2.jpg",
       "description": "Классический боксёрский мешок для отработки ударов."
     },
     {
@@ -120,7 +120,7 @@
       "price": 8990,
       "category": "Снаряжение",
       "subcategory": "Тренажёры",
-      "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=400&fit=crop",
+      "image": "https://i.pinimg.com/736x/28/8b/f7/288bf74dbb9f28db0aa0b3b0b0a448b6.jpg",
       "description": "Пневматическая груша для отработки скорости и реакции."
     },
     {
@@ -129,7 +129,7 @@
       "price": 1190,
       "category": "Снаряжение",
       "subcategory": "Бинты",
-      "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=400&fit=crop",
+      "image": "https://i.pinimg.com/1200x/a7/43/59/a743590aa01257d8e7011f69f552ce67.jpg",
       "description": "Мексиканские бинты с увеличенной эластичностью."
     },
     {
@@ -138,10 +138,10 @@
       "price": 24990,
       "category": "Снаряжение",
       "subcategory": "Перчатки",
-      "image": "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&h=400&fit=crop",
+      "image": "https://i.pinimg.com/736x/7c/dd/b2/7cddb2122b7cf179c5dafbf300d66a39.jpg",
       "description": "Премиум перчатки ручной работы из Японии."
     }
-  ],
-  "$schema":[ "./node_modules/json-server/schema.json"]
+  ]
+
 }
   
