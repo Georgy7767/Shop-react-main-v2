@@ -1,0 +1,335 @@
+/* ===== ШАПКА ===== */
+.header {
+  background: rgba(13, 13, 13, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, #8b0000, #c41e3a, #d4af37, #c41e3a, #8b0000) 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+.headerInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* ===== ЛОГОТИП ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logoIcon {
+  font-size: 2rem;
+  filter: drop-shadow(0 0 10px rgba(196, 30, 58, 0.5));
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logoMain {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c41e3a;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(196, 30, 58, 0.4);
+}
+
+.logoSub {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  color: #d4af37;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navLink {
+  color: #aaa;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c41e3a, #d4af37);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* ===== КАТАЛОГ С ВЫПАДАЮЩИМ МЕНЮ ===== */
+.catalogWrapper {
+  position: relative;
+}
+
+.catalogBtn {
+  background: transparent;
+  border: 2px solid #c41e3a;
+  color: #fff;
+  padding: 10px 24px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(196, 30, 58, 0.2);
+}
+
+.catalogBtn:hover {
+  background: rgba(196, 30, 58, 0.2);
+  box-shadow: 0 0 25px rgba(196, 30, 58, 0.5);
+  transform: translateY(-2px);
+}
+
+.arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.catalogBtn:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* Выпадающее меню */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  background: rgba(20, 20, 20, 0.98);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 10px 0;
+  min-width: 220px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdownItem {
+  padding: 12px 20px;
+  color: #ccc;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.dropdownItem:hover {
+  background: rgba(196, 30, 58, 0.15);
+  color: #fff;
+}
+
+.categoryName {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+}
+
+.arrowRight {
+  font-size: 0.7rem;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.dropdownItem:hover .arrowRight {
+  color: #c41e3a;
+  transform: translateX(3px);
+}
+
+/* Подменю */
+.submenu {
+  position: absolute;
+  left: calc(100% + 5px);
+  top: 0;
+  background: rgba(20, 20, 20, 0.98);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 10px 0;
+  min-width: 180px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  animation: fadeInRight 0.2s ease-out;
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.submenuItem {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+
+
+letter-spacing: 1px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submenuItem:hover {
+  background: rgba(196, 30, 58, 0.2);
+  color: #fff;
+  padding-left: 25px;
+}
+
+/* ===== АВТОРИЗАЦИЯ ===== */
+.auth {
+  display: flex;
+  align-items: center;
+}
+
+.authLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.authLink {
+  color: #aaa;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.authLink:hover {
+  border-color: #c41e3a;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(196, 30, 58, 0.3);
+}
+
+.authLinkReg {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #c41e3a, #8b0000);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.authLinkReg:hover {
+  box-shadow: 0 5px 20px rgba(196, 30, 58, 0.5);
+  transform: translateY(-2px);
+}
+
+.userBlock {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.userName {
+  color: #d4af37;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+}
+
+.logoutBtn {
+  background: transparent;
+  border: 1px solid #c41e3a;
+  color: #c41e3a;
+  padding: 8px 16px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background: rgba(196, 30, 58, 0.2);
+  color: #fff;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+  .headerInner {
+    height: 60px;
+  }
+  
+  .logoMain {
+    font-size: 1.3rem;
+  }
+  
+  .logoSub {
+    display: none;
+  }
+  
+  .nav {
+    gap: 15px;
+  }
+  
+  .navLink {
+    display: none;
+  }
+  
+  .catalogBtn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+};

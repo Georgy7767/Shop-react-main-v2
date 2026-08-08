@@ -1,0 +1,207 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  animation: fadeInUp 0.7s ease-out;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #d4af37 0%, #c41e3a 50%, #8b0000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #888;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* ===== КАТЕГОРИИ СВЕРХУ ===== */
+.categoriesRow {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.categoryBtn {
+  padding: 14px 32px;
+  background: rgba(42, 42, 42, 0.6);
+  border: 2px solid #333;
+  color: #aaa;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.categoryBtn:hover {
+  background: rgba(196, 30, 58, 0.2);
+  border-color: #c41e3a;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.3);
+}
+
+.activeCategory {
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #c41e3a, #8b0000);
+  border: 2px solid #c41e3a;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 25px rgba(196, 30, 58, 0.5);
+  transform: translateY(-3px);
+}
+
+/* ===== СЕТКА ТОВАРОВ ===== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* ===== КАРТОЧКА ТОВАРА ===== */
+.card {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(13, 13, 13, 0.95));
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #8b0000, #c41e3a, #d4af37, #c41e3a, #8b0000);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  border-color: #c41e3a;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(196, 30, 58, 0.15);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: brightness(0.9);
+}
+
+.card:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  padding: 18px 18px 8px;
+  color: #f0f0f0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.price {
+  padding: 0 18px;
+  color: #d4af37;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.card button {
+  width: calc(100% - 36px);
+  margin: 18px;
+  padding: 14px;
+  background: linear-gradient(135deg, #c41e3a, #8b0000);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 2px;
+}
+
+.card button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.card button:hover {
+  background: linear-gradient(135deg, #d41818, #c41e3a);
+  box-shadow: 0 5px 25px rgba(196, 30, 58, 0.5);
+  transform: scale(1.02);
+}
+
+.card button:hover::before {
+  left: 100%;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+  .categoriesRow {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .categoryBtn, .activeCategory {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
+}

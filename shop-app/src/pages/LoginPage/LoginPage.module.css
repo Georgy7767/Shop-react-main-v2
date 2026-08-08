@@ -1,0 +1,24 @@
+.container{
+    padding: 30px;
+}
+.form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: auto;
+}
+.form input{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 30px;
+}
+.form button{
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+h1{
+    text-align: center;
+}

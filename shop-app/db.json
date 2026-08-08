@@ -1,0 +1,147 @@
+{
+  "users": [
+    {
+      "name": "Test",
+      "email": "Test@mail.ru",
+      "password": "Test",
+      "id": "plGcXB8anIk"
+    },
+    {
+      "name": "dsfdsf",
+      "email": "dsfsdfsd",
+      "password": "sdfsdfsdfsd",
+      "id": "bZw5p9FuYv4"
+    },
+    {
+      "name": "test",
+      "email": "test",
+      "password": "test",
+      "id": "g7wDClCfJ0E"
+    },
+    {
+      "name": "qqq",
+      "email": "qqq",
+      "password": "qqq",
+      "id": "4jfB7s29mo4"
+    },
+    {
+      "name": "test1",
+      "email": "test1",
+      "password": "test1",
+      "id": "KtuQyHNbBII"
+    }
+  ],
+  
+  "products": [
+    {
+      "id": 1,
+      "title": "Перчатки Everlast Pro Style",
+      "price": 5490,
+      "category": "Снаряжение",
+      "subcategory": "Перчатки",
+      "image": "https://i.pinimg.com/736x/23/08/f3/2308f332528bc04b9a008ee27a165baa.jpg",
+      "description": "Профессиональные боксёрские перчатки из натуральной кожи. Отличная амортизация ударов."
+    },
+    {
+      "id": 2,
+      "title": "Шлем тренировочный RDX",
+      "price": 3290,
+      "category": "Снаряжение",
+      "subcategory": "Шлема",
+      "image": "https://i.pinimg.com/1200x/2e/7c/12/2e7c121dbb1e8540bad68220c8afd754.jpg",
+      "description": "Надёжная защита головы с усиленной подбородочной частью."
+    },
+    {
+      "id": 3,
+      "title": "Бинты боксёрские 4.5м",
+      "price": 890,
+      "category": "Снаряжение",
+      "subcategory": "Бинты",
+      "image": "https://i.pinimg.com/736x/1b/54/18/1b54180a33044435c1b317244216a24d.jpg",
+      "description": "Эластичные бинты для фиксации запястий. Длина 4.5 метра."
+    },
+    {
+      "id": 4,
+      "title": "Капа Opro Silver",
+      "price": 1590,
+      "category": "Снаряжение",
+      "subcategory": "Защита",
+      "image": "https://i.pinimg.com/736x/81/0c/aa/810caa3cd08df1d3ad0619417a6564d6.jpg",
+      "description": "Профессиональная капа с индивидуальной формовкой под челюсть."
+    },
+    {
+      "id": 5,
+      "title": "Перчатки",
+      "price": 5690,
+      "category": "Снаряжение",
+      "subcategory": "Перчатки",
+      "image": "https://i.pinimg.com/736x/9f/e6/a8/9fe6a8bcf6abb1a24c91c3386d866be7.jpg",
+      "description": "Перчатки для смешанных единоборств с открытыми пальцами."
+    },
+    {
+      "id": 6,
+      "title": "Боксёрки nike hyperko 2",
+      "price": 7990,
+      "category": "Обувь",
+      "subcategory": "Боксерки",
+      "image": "https://i.pinimg.com/1200x/cd/ca/8b/cdca8b915df5191f42e29ad7a36e1c9e.jpg",
+      "description": "Лёгкие боксёрские ботинки с отличным сцеплением с рингом."
+    },
+    {
+      "id": 7,
+      "title": "Боксёрки Nike Machomai 2",
+      "price": 9990,
+      "category": "Обувь",
+      "subcategory": "Боксерки",
+      "image": "https://i.pinimg.com/736x/36/84/02/36840233c747256bfaaa43534358c791.jpg",
+      "description": "Профессиональные боксёрки, любимые многими чемпионами."
+    },
+    {
+      "id": 8,
+      "title": "Скакалка скоростная Everlast",
+      "price": 690,
+      "category": "Аксессуары",
+      "subcategory": "Аксессуары",
+      "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=400&fit=crop",
+      "description": "Лёгкая скакалка для кардиотренировок. Подшипниковое соединение."
+    },
+    {
+      "id": 9,
+      "title": "Мешок боксёрский 50кг",
+      "price": 12990,
+      "category": "Снаряжение",
+      "subcategory": "Тренажёры",
+      "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=400&fit=crop",
+      "description": "Классический боксёрский мешок для отработки ударов."
+    },
+    {
+      "id": 10,
+      "title": "Груша на растяжке",
+      "price": 8990,
+      "category": "Снаряжение",
+      "subcategory": "Тренажёры",
+      "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=400&fit=crop",
+      "description": "Пневматическая груша для отработки скорости и реакции."
+    },
+    {
+      "id": 11,
+      "title": "Бинты Mexican Style 5м",
+      "price": 1190,
+      "category": "Снаряжение",
+      "subcategory": "Бинты",
+      "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=400&fit=crop",
+      "description": "Мексиканские бинты с увеличенной эластичностью."
+    },
+    {
+      "id": 12,
+      "title": "Перчатки Winning MS-600",
+      "price": 24990,
+      "category": "Снаряжение",
+      "subcategory": "Перчатки",
+      "image": "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&h=400&fit=crop",
+      "description": "Премиум перчатки ручной работы из Японии."
+    }
+  ],
+  "$schema":[ "./node_modules/json-server/schema.json"]
+}
+  

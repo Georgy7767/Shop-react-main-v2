@@ -1,0 +1,12 @@
+html,body,#root{
+    min-height: 100%;
+    padding-top: 10px;
+}
+.app{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    flex:1
+}
