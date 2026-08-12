@@ -8,6 +8,7 @@ function CatalogPage(){
     const[products,setProducts]=useState([]);
     const[selectedCategory,setSelectedCategory]=useState("Все");
     const[loading,setLoading]=useState(true);
+    const[toast,setToast]=useState(null);
     
     const categories=["Все",...new Set(products.map(product=>product.category))];
     const filterProduct=selectedCategory==="Все"?
@@ -28,27 +29,28 @@ function CatalogPage(){
         loadProducts();
     },[])
     
-    
     function addToCart(product){
         const user=localStorage.getItem("user");
         if(!user){
-            alert("Чтобы добавить товар в корзину нужно войти")
+            showToast("Войдите, чтобы добавить в корзину");
             navigate("/login");
             return;
         }
         const cart=JSON.parse(localStorage.getItem("cart"))|| [];
-        const foundProduct=cart.find((item)=>
-            item.id===product.id)
+        const foundProduct=cart.find((item)=>item.id===product.id)
         if(foundProduct){
             foundProduct.count+=1;
         }
         else{
-            cart.push({
-                ...product,count:1,
-            });
+            cart.push({...product,count:1});
         }
         localStorage.setItem("cart",JSON.stringify(cart));
-        alert("Товар добавлен в корзину")
+        showToast("Товар добавлен в корзину");
+    }
+
+    function showToast(msg){
+        setToast(msg);
+        setTimeout(()=>setToast(null),2400);
     }
 
     if (loading) {
@@ -66,9 +68,8 @@ function CatalogPage(){
             <h1 className={styles.title}>Каталог товаров</h1>
             <p className={styles.subtitle}>Профессиональная боксёрская атрибутика для настоящих бойцов</p>
             
-            {/* КАТЕГОРИИ СВЕРХУ */}
             <div className={styles.categoriesRow}>
-                {categories.map((category)=>(
+                {categories.map((category)=> (
                     <button 
                         key={category}
                         className={selectedCategory === category ? styles.activeCategory : styles.categoryBtn}
@@ -80,25 +81,33 @@ function CatalogPage(){
             </div>
             
             <div className={styles.products}>
-                {filterProduct.map((product, index)=>(
+                {filterProduct.map((product)=> (
                     <div 
                         className={styles.card} 
                         key={product.id}
-                        style={{animationDelay: `${index * 0.1}s`}}
                         onClick={()=>navigate(`/product/${product.id}`)}
                     >
-                        <img src={product.image} alt={product.title}/>
-                        <h3>{product.title}</h3>
-                        <p className={styles.price}>{product.price.toLocaleString()} ₽</p>
-                        <button onClick={(event)=>{
-                            event.stopPropagation();
-                            addToCart(product);
-                        }}>
+                        <div className={styles.imgWrap}>
+                            <img src={product.image} alt={product.title}/>
+                        </div>
+                        <div className={styles.info}>
+                            <h3>{product.title}</h3>
+                            <p className={styles.price}>{product.price.toLocaleString()} ₽</p>
+                        </div>
+                        <button 
+                            className={styles.addBtn}
+                            onClick={(event)=>{
+                                event.stopPropagation();
+                                addToCart(product);
+                            }}
+                        >
                             В корзину
                         </button>
                     </div>
                 ))}
             </div>
+
+            {toast && <div className={styles.toast}>{toast}</div>}
         </div>
     )
 }

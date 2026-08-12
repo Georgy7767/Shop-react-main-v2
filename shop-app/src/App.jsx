@@ -11,27 +11,25 @@ import FooterPage from './components/FooterPage/FooterPage'
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Header />
-      <Routes>
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-        <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/cart" element={
-          <ProtectedRoute>
-            <CartPage />
-          </ProtectedRoute>
-        } />
-        <Route path="/" element={<CatalogPage />} />
-      </Routes>
+      <main className="main">
+        <Routes>
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/cart" element={
+            <ProtectedRoute>
+              <CartPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/" element={<CatalogPage />} />
+        </Routes>
+      </main>
       <FooterPage />
-    </>
+    </div>
   )
 }
 
 export default App
-
-
-
-
